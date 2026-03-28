@@ -1,7 +1,10 @@
 {
   "client_config": {
     "version_code": 1,
+    "version_name": "1.0",
+    "server": "135.148.164.122:14077",
     "url_launcher": "https://hernanbosta-max.github.io/Teste-s/launcher.apk",
-    "url_cache_files": "https://hernanbosta-max.github.io/Teste-s/config.json"
+    "url_cache_files": "https://hernanbosta-max.github.io/Teste-s/config.json",
+    "status": "online"
   }
-} 
+}
