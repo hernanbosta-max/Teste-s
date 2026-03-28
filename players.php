@@ -1,35 +1,36 @@
 <?php
 header('Content-Type: application/json');
 
-// Configurações do servidor SA-MP
-$server_ip   = "190.102.40.7"; // seu IP
-$server_port = 8821;              // porta do server
+$server_ip   = "135.148.164.122"; // seu IP correto
+$server_port = 14077;             // sua porta
 
-// Função para pegar informações do servidor SA-MP
 function query_samp($ip, $port) {
-    $sock = @fsockopen('udp://'.$ip, $port, $errno, $errstr, 2);
-    if (!$sock) return false;
+    $packet = "SAMP";
+    foreach (explode('.', $ip) as $octet) {
+        $packet .= chr($octet);
+    }
+    $packet .= chr($port & 0xFF).chr($port >> 8).'i';
 
-    // Pacote para query de informações básicas
-    fwrite($sock, "SAMP".chr(strtok($ip, ".")).chr(strtok(".")).chr(strtok(".")).chr(strtok(".")).chr($port & 0xFF).chr($port >> 8).'i');
+    $socket = @fsockopen("udp://$ip", $port, $errno, $errstr, 2);
+    if (!$socket) return false;
 
-    $data = fread($sock, 2048);
-    fclose($sock);
+    fwrite($socket, $packet);
+    stream_set_timeout($socket, 2);
+    $data = fread($socket, 2048);
+    fclose($socket);
 
-    if (!$data) return false;
+    if (!$data || strlen($data) < 13) return false;
 
-    // Pega jogadores online (bytes 11 e 12)
     $players = ord($data[11]) + (ord($data[12]) << 8);
 
     return [
         "players1" => $players,
-        "ping"     => rand(60, 180), // simulação de ping
+        "ping"     => rand(60, 120),
         "doubling" => 1,
         "new"      => 1
     ];
 }
 
-// Pega status do servidor
 $status = query_samp($server_ip, $server_port);
 
 if (!$status) {
@@ -41,5 +42,4 @@ if (!$status) {
     ];
 }
 
-// Retorna em JSON no formato pedido
 echo json_encode(["servers" => [$status]], JSON_UNESCAPED_UNICODE);
