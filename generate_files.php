@@ -2,7 +2,7 @@
 header('Content-Type: application/json');
 
 $base_dir = __DIR__;
-$base_url = "http://191.252.102.88/apiraife/com.raiferoleplay.game/";
+$base_url = "https://hernanbosta-max.github.io/Teste-s/news3.png";
 
 function listarArquivos($dir, $base_dir, $base_url) {
     $arquivos = [];
