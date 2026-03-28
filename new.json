@@ -1,19 +1,19 @@
 {
   "news": [
     {
-      "title": "Bem-vindo ao ImperioRJ",
-      "description": "O servidor ImperioRJ está oficialmente aberto! Entre agora e comece sua história no roleplay.",
-      "image": "http://177.155.199.185/apigua/files/images/news1.png"
+      "title": "Bem-vindo ao seu servidor",
+      "description": "O servidor estÃ¡ online! Entre agora e comece sua jornada no roleplay.",
+      "image": "https://hernanbosta-max.github.io/Teste-s/news1.png"
     },
     {
-      "title": "Atualização v1.1",
-      "description": "Nova HUD padrão GTA, correções de bugs e melhorias de desempenho.",
-      "image": "http://177.155.199.185/apigua/files/images/news2.png"
+      "title": "AtualizaÃ§Ã£o v1.0",
+      "description": "CorreÃ§Ãµes de bugs e melhorias de desempenho.",
+      "image": "https://hernanbosta-max.github.io/Teste-s/news2.png"
     },
     {
-      "title": "Sistema de Organizações",
-      "description": "Agora é possível criar e gerenciar organizações dentro do servidor.",
-      "image": "http://177.155.199.185/apigua/files/images/news3.png"
+      "title": "Sistema ativo",
+      "description": "Todos os sistemas estÃ£o funcionando corretamente.",
+      "image": "https://hernanbosta-max.github.io/Teste-s/news3.png"
     }
   ]
 }
