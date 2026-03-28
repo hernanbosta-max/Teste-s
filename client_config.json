@@ -1,0 +1,7 @@
+{
+  "client_config": {
+    "version_code": 1,
+    "url_launcher": "http://172.185.152.154/apigua/data/laucher.apk",
+    "url_cache_files": "http://191.252.102.88/apiraife/com.raiferoleplay.game/generate_files.php"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "news": [
+    {
+      "title": "Bem-vindo ao ImperioRJ",
+      "description": "O servidor ImperioRJ está oficialmente aberto! Entre agora e comece sua história no roleplay.",
+      "image": "http://177.155.199.185/apigua/files/images/news1.png"
+    },
+    {
+      "title": "Atualização v1.1",
+      "description": "Nova HUD padrão GTA, correções de bugs e melhorias de desempenho.",
+      "image": "http://177.155.199.185/apigua/files/images/news2.png"
+    },
+    {
+      "title": "Sistema de Organizações",
+      "description": "Agora é possível criar e gerenciar organizações dentro do servidor.",
+      "image": "http://177.155.199.185/apigua/files/images/news3.png"
+    }
+  ]
+}
